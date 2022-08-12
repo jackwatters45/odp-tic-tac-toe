@@ -1,0 +1,30 @@
+/* Make look like 2048 */
+
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto, "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    /* outline: solid red; */
+}
+
+:root {
+    background-color: #faf8ef;
+    color: #776e65;
+}
+
+/* #eee4da #bbada0 #776e65*/
+
+/* General styles */
+.shadow {
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, .5);
+}
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+}
