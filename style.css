@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: roboto, "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-    /* outline: solid red; */
+    outline: solid red;
 }
 
 :root {
@@ -22,9 +22,33 @@
     box-shadow: 5px 10px 25px rgba(0, 0, 0, .5);
 }
 
+.board {
+    background-color: #776e65;
+    display: grid;
+    resize: both;
+    overflow: auto;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+    background-color: #faf8ef;
+    min-height: 250px;
+    height: 250px;
+}
+
 /* Layout */
 .container {
     display: grid;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 60px 1fr 20px;
     height: 100vh;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-content {
+    grid-row: 2;
 }
