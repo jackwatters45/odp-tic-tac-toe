@@ -11,11 +11,6 @@
 </head>
 
 <body>
-    <!-- <div class="instructions">
-        1. set up gameboard contents - board and webpage
-        2. Clean up the interface to allow players to put in their names, include a button to
-        start/restart the game and add a display element that congratulates the winning player!
-    </div> -->
     <div class="container">
         <div class="nav-bar">
             <div class="title">Tic Tac Toe</div>
@@ -27,6 +22,9 @@
                 <div class="player-o player">Player O</div>
             </div>
             <div class="board shadow">
+                <div class="overlay game-over game-message">
+                    <p>Game over!</p>
+                </div>
                 <div class="box" id="0"></div>
                 <div class="box" id="1"></div>
                 <div class="box" id="2"></div>
@@ -41,7 +39,7 @@
         <div class="footer">
             ™Jack Watters 2022
         </div>
-    </div>
+        
     </div>
 </body>
 
