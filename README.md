@@ -1,6 +1,6 @@
 # odp-tic-tac-toe
 
-turn all this bs into functions and shit
+turn all this bs into functions
 
 organize logic
 

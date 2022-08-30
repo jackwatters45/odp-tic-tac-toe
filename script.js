@@ -40,6 +40,13 @@ const displayController = (() => {
     overlay.classList.remove("hidden");
   };
 
+  // when tie found, display tie overlay
+  let displayTie = () => {
+    let winnerText = overlay.firstElementChild;
+    winnerText.textContent = `It's a tie!`;
+    overlay.classList.remove("hidden");
+  };
+
   // Check for winner -> four different ways to win and a check for tie
   let checkForWinner = (turn) => {
     let vertical = () => {
@@ -95,7 +102,15 @@ const displayController = (() => {
     };
 
     let tie = () => {
-      console.log("don't forget to finish tie()");
+      let totalCount = 0;
+      gameBoard.getBoard().forEach((box) => {
+        if (typeof box === "string") {
+          totalCount++;
+        }
+      });
+      if (totalCount == 9) {
+        displayTie();
+      }
     };
 
     vertical();
@@ -103,30 +118,30 @@ const displayController = (() => {
     firstCross();
     secondCross();
     tie();
-    // TODO: check for tie
   };
 
-  // make this pretty much just functions
+  // Toggles turn dispkay and changes current turn
+  let togglePlayerTurn = () => {
+    players.forEach((player) => {
+      player.classList.toggle("glow");
+    });
+    if (turn == "X") {
+      turn = "O";
+    } else {
+      turn = "X";
+    }
+  };
+
+  // Actually play the game
   let playGame = () => {
     clearScreen();
-    // make two players
-    // make board
     boxes.forEach((box) => {
       box.addEventListener("click", () => {
         if (!box.innerHTML) {
           box.innerHTML = turn;
           gameBoard.setValue(box.id, box.innerHTML);
-
-          players.forEach((player) => {
-            player.classList.toggle("glow");
-          });
           checkForWinner(turn);
-
-          if (turn == "X") {
-            turn = "O";
-          } else {
-            turn = "X";
-          }
+          togglePlayerTurn();
         }
       });
     });
@@ -135,12 +150,13 @@ const displayController = (() => {
   return { playGame };
 })();
 
-// 2. player objects - factories
+// player objects - factories
+// TODO: develop when I add the ability to add user name
 const player = (name, sign) => {
-  let _name = name;
-  let _sign = sign;
+  let getName = () => name;
+  let getSign = () => sign;
 
-  return { _name, _sign };
+  return { getName, getSign };
 };
 
 displayController.playGame();
