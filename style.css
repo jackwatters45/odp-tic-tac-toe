@@ -83,13 +83,18 @@ button {
 
 .board {
     background-color: #bbada0;
-    display: grid;
     height: 500px;
     width: 500px;
-    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.box-container {
+    display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    height: 500px;
+    width: 500px;
     border: 15px solid #bbada0;
     border-radius: 6px;
 }
@@ -113,48 +118,25 @@ button {
 }
 
 /* Overlay */
-.game-over{
-    display: flex;
-}
-
 .overlay {
-    display: none;
+    display: flex;
+    /* JS to remove when winner */
+    height: 500px;
+    width: 500px;
+    border-radius: 6px;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background: rgba(238, 228, 218, 0.73);
-    z-index: 100;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    -webkit-animation: fade-in 800ms ease 1200ms;
-    -moz-animation: fade-in 800ms ease 1200ms;
-    animation: fade-in 800ms ease 1200ms;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both;
 }
 
-.game-message {
+.hidden {
+    /* JS to remove when winner */
     display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(238,228,218,.73);
-    z-index: 100;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    -webkit-animation: fade-in 800ms ease 1200ms;
-    -moz-animation: fade-in 800ms ease 1200ms;
-    animation: fade-in 800ms ease 1200ms;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both;
+}
+
+.winner {
+    font-size: 60px;
+    max-width: 450px;
 }

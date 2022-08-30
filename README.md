@@ -6,9 +6,6 @@ organize logic
 
 make sure to actually use objects
 
-add winner display
-
-
 Eventually 
 1.  add ability to edit player names.
 2.  create an AI so that a player can play against the computer!
