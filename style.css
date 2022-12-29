@@ -13,6 +13,10 @@
     color: #776e65;
 }
 
+body {
+    user-select: none;
+}
+
 /* General styles */
 button {
     cursor: pointer;
