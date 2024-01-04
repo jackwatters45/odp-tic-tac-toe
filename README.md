@@ -15,6 +15,8 @@ Vanilla js tic-tac-toe game. Styling inspired by 2049 game.
 ```zsh
 git clone https://github.com/jackwatters45/odp-tic-tac-toe.git
 
+npm install
+
 npm run dev
 ```
 
