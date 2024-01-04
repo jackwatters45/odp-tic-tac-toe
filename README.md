@@ -1,14 +1,37 @@
 # odp-tic-tac-toe
 
-turn all this bs into functions
+Vanilla js tic-tac-toe game. Styling inspired by 2049 game.
 
-organize logic
+## Live Project
 
-make sure to actually use objects
+<https://jackwatters45.github.io/odp-tic-tac-toe/>
 
-Eventually 
-1.  add ability to edit player names.
-2.  create an AI so that a player can play against the computer!
-    1. Start by just getting the computer to make a random legal move.
-    2. Once you’ve gotten that, work on making the computer smart. It is possible to create an unbeatable AI using the minimax algorithm (read about it here, some googling will help you out with this one)
-    3. If you get this running definitely come show it off in the chatroom. It’s quite an accomplishment!
+## Preview
+
+![Preview](https://res.cloudinary.com/drheg5d7j/image/upload/v1704334776/jackwatters45.github.io_odp-tic-tac-toe__dsrgyi.webp)
+
+## Local Install
+
+```zsh
+git clone https://github.com/jackwatters45/odp-tic-tac-toe.git
+
+npm run dev
+```
+
+## Contribute
+
+- Issue Tracker: <https://github.com/jackwatters45/odp-tic-tac-toe/issues>
+- Source Code: <https://github.com/jackwatters45/odp-tic-tac-toe/tree/main/src>
+
+## Support
+
+If you are having issues, please let me know at: <jack.watters@me.com>
+
+## License
+
+The project is licensed under the MIT license.
+
+## Future improvements
+
+- add ability to edit player names.
+- create an AI so that a player can play against the computer!

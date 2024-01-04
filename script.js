@@ -57,6 +57,7 @@ const displayController = (() => {
         if (count === 3) displayWinner(turn);
       }
     };
+    vertical();
 
     const horizontal = () => {
       for (let j = 0; j <= 6; j += 3) {
@@ -67,6 +68,7 @@ const displayController = (() => {
         if (count === 3) displayWinner(turn);
       }
     };
+    horizontal();
 
     const firstCross = () => {
       let count = 0;
@@ -75,6 +77,7 @@ const displayController = (() => {
       }
       if (count === 3) displayWinner(turn);
     };
+    firstCross();
 
     const secondCross = () => {
       let count = 0;
@@ -83,20 +86,16 @@ const displayController = (() => {
       }
       if (count === 3) displayWinner(turn);
     };
+    secondCross();
 
     const tie = () => {
       if (currentBoard.filter((box) => typeof box === 'string').length === 9)
         displayTie();
     };
-
-    vertical();
-    horizontal();
-    firstCross();
-    secondCross();
     tie();
   };
 
-  // Toggles turn dispkay and changes current turn
+  // Toggles turn display and changes current turn
   const togglePlayerTurn = () => {
     players.forEach((player) => player.classList.toggle('glow'));
     turn = turn === 'X' ? 'O' : 'X';
